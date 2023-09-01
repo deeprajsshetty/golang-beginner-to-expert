@@ -15,6 +15,9 @@ Perfect for beginners, this book offers a friendly introduction to Golang. Packe
 ### [Learning Go by Jon Bodner](https://www.amazon.com/Learning-Go-Idiomatic-Real-World-Programming/dp/1492077216)
 A fantastic option for beginners, this book presents Golang's key concepts in a clear and concise manner.
 
+### [Concurrency in Go: Tools and Techniques for Developers](https://www.amazon.com/Concurrency-Go-Tools-Techniques-Developers/dp/1491941197)
+This book explores tools and techniques for managing concurrency in Go, making it a valuable resource for developers seeking to enhance their skills.
+
 ### [Introducing Go: Build Reliable, Scalable Programs by Caleb Doxsey](https://www.amazon.com/Introducing-Go-Reliable-Scalable-Programs/dp/1491941952)
 Tailored for intermediate Golang developers, this book delves into advanced topics like concurrency and testing, aiding your progression.
 
