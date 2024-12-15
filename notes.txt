@@ -1,0 +1,16 @@
+1. Mastering Go - Fourth Edition
+   https://github.com/mactsouk/mGo4th/blob/main/appA/gColl.go
+
+2. Generic Data Structures and Algorithms in Go
+
+3. Event-Driven Architecture in Golang
+
+4. Hands-On Software Architecture with Golang
+
+
+// Practice Samples
+1. Circuit breakers (in Go)
+   https://medium.com/@homayoonalimohammadi/circuitbreakers-in-go-d85f5297cb50
+
+/////////////// EMAIL IDS ////////////////
+o.reilly.0000000001@gmail.com - Mail ID 1
