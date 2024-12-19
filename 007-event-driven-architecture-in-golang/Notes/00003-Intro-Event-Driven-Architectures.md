@@ -46,12 +46,11 @@ type PaymentReceived struct {
     PaymentID string
 }
 ```
-
 Here is how that notification might be used:
 
 ![alt text](image-1.png)
 
-## Figure 1.1 – PaymentReceived as an event notification
+Figure 1.1 – PaymentReceived as an event notification
 
 Figure 1.1 shows the `PaymentReceived` notification being received by two different services. While ServiceA only needed to be notified of the event, ServiceB will require additional information and must make a call back to the Payments service to fetch it.
 
@@ -74,7 +73,7 @@ In this example for event-carried state transfer, we’ve included some addition
 
 ![alt text](image.png)
 
-## Figure 1.1 – PaymentReceived as an event notification
+Figure 1.1 – PaymentReceived as an event notification
 
 Figure 1.1 shows the `PaymentReceived` notification being received by two different services. While **ServiceA** only needed to be notified of the event, **ServiceB** will require additional information and must make a call back to the Payments service to fetch it.
 
@@ -97,7 +96,7 @@ In this example for event-carried state transfer, we’ve included some addition
 
 ![alt text](image-2.png)
 
-## Figure 1.2 – PaymentReceived as an Event-Carried State Change
+Figure 1.2 – PaymentReceived as an Event-Carried State Change
 
 When the `PaymentReceived` event is sent with additional information, it changes how downstream services might react to it. We can see in **Figure 1.2** that ServiceB no longer needs to call the Payments service because the event it has received already contains everything it requires.
 
@@ -109,7 +108,7 @@ When we use event sourcing, we store the events in an event store rather than co
 
 ![alt text](image-3.png)
 
-## Figure 1.3 – Payment Data Recorded Using Event Sourcing
+Figure 1.3 – Payment Data Recorded Using Event Sourcing
 
 In **Figure 1.3**, we see the entire history of our data is kept as individual entries in the event store. When we need to work with a payment in the application, we would read all the entries associated with that record and then perform a left fold of the entries to recreate the final state.
 
@@ -119,7 +118,7 @@ You will observe that four components are found at the center of all event patte
 
 ![alt text](image-4.png)
 
-## Figure 1.4 – Event, Queue, Producer, and Consumer
+Figure 1.4 – Event, Queue, Producer, and Consumer
 
 ### Event
 
@@ -158,7 +157,7 @@ You can see an example of a message queue in the following diagram:
 
 ![alt text](image-5.png)
 
-## Figure 1.5 – Message Queue
+Figure 1.5 – Message Queue
 
 A message queue is useful for simple publisher/subscriber (pub/sub) scenarios when the subscribers are actively running or can retrieve the events quickly enough.
 
@@ -170,7 +169,7 @@ The following diagram provides an example of an event stream:
 
 ![alt text](image-6.png)
 
-## Figure 1.6 – Event Stream
+Figure 1.6 – Event Stream
 
 When you need retention and the ability to replay events, an event stream should be used instead of a message queue.
 
@@ -182,7 +181,7 @@ You can see an example of an event store in the following screenshot:
 
 ![alt text](image-7.png)
 
-## Figure 1.7 – Event Store
+Figure 1.7 – Event Store
 
 Event stores are used in conjunction with event sourcing to track changes to entities. The top three rows of **Figure 1.7** depict the event-sourcing example events from **Figure 1.3**.
 
@@ -208,7 +207,7 @@ We’re going to be building a small application that simulates a retail experie
 
 ![alt text](image-8.png)
 
-# Figure 1.8 – High-level view of the MallBots application components
+Figure 1.8 – High-level view of the MallBots application components
 
 ## The pitch
 
@@ -244,7 +243,7 @@ You’re going to be seeing a lot of hexagons in the diagrams of this book. The 
 
 ![alt text](image-9.png)
 
-# Figure 1.9 – Hexagonal representation of a service
+Figure 1.9 – Hexagonal representation of a service
 
 The API gateway and application services are all represented as hexagons with inputs (such as the API and event subscriptions, shown on the left) and the outputs (the database and event publications, on the right). This is a visual presentation of **hexagonal architecture**, and we will be talking more about that in **Chapter 2, Supporting Patterns in Brief**.
 
@@ -260,13 +259,13 @@ If the **Depot** service is not responding or is failing to respond on time, the
 
 ![alt text](image-10.png)
 
-# Figure 1.10 – P2P communication
+Figure 1.10 – P2P communication
 
 In an **Event-Driven Architecture (EDA)** application, the components have been loosely coupled and will be set up with an event broker between them, as shown in the following diagram. A crash in an event consumer will have no impact on the event producer. Likewise, other faults (internal to the consumer) that cause it to temporarily be unable to process events again have no impact:
 
 ![alt text](image-11.png)
 
-# Figure 1.11 – Brokered event communication
+Figure 1.11 – Brokered event communication
 
 Considering the example case of the **Depot** service becoming overrun with work, causing it to get backed up, orders submitted by the **Orders** service will be processed, just a little slower. The **Orders** service will be unaffected and continue to take orders as they come in. Better still, if the **Depot** service is down entirely, then it may only cause a longer delay until it can be restarted or replaced, and the **Orders** service continues.
 
@@ -282,13 +281,13 @@ When they choose to use the API, the team will need to coordinate with existing 
 
 ![alt text](image-12.png)
 
-# Figure 1.12 – New P2P service
+Figure 1.12 – New P2P service
 
 Components that communicate using **events** make it easier for new components and processes to come online without requiring coordination with the teams in charge of existing components, as shown in the following diagram:
 
 ![alt text](image-13.png)
 
-# Figure 1.13 – New brokered event service
+Figure 1.13 – New brokered event service
 
 Now, when the **Analytics** service team has finished its work of picking which events to consume and capturing the data it needs, it can then add it to the application immediately.
 
@@ -320,7 +319,7 @@ This allows a second record of to-be-published events to be created, and even ad
 
 ![alt text](image-14.png)
 
-# Figure 1.14 – Outbox pattern
+Figure 1.14 – Outbox pattern
 
 We will learn more about this challenge and solution when I introduce you to the **Outbox pattern** in **Chapter 6, Asynchronous Connections**.
 
@@ -344,7 +343,7 @@ There are two patterns we can use to bring components together to manage workflo
 
 ![alt text](image-15.png)
 
-# Figure 1.15 – Workflow choreography and orchestration
+Figure 1.15 – Workflow choreography and orchestration
 
 - **Choreography**: The components each individually know about the work they must do, and which step comes next.
 - **Orchestration**: The components know very little about their role and are called on to do their part by a centralized orchestrator.
