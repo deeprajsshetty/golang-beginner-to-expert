@@ -1,12 +1,17 @@
 1. Mastering Go - Fourth Edition
    https://github.com/mactsouk/mGo4th/blob/main/appA/gColl.go
 
-2. Generic Data Structures and Algorithms in Go
+2. Concurrency in Go
+   https://github.com/kat-co/concurrency-in-go-src
 
 3. Event-Driven Architecture in Golang
+   https://github.com/PacktPublishing/Event-Driven-Architecture-in-Golang
+   
+4. Data Structures and Algorithms in Go
+   -- Generic Data Structures and Algorithms in Go: An Applied Approach Using Concurrency, Genericity and Heuristics
+   -- Learn Data Structures and Algorithms with Golang
 
-4. Hands-On Software Architecture with Golang
-
+5. Hands-On Software Architecture with Golang
 
 // Practice Samples
 1. Circuit breakers (in Go)
@@ -14,3 +19,4 @@
 
 /////////////// EMAIL IDS ////////////////
 o.reilly.0000000001@gmail.com - Mail ID 1
+o.reilly.0000000002@gmail.com - Mail ID 2
