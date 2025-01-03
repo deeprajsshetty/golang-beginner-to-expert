@@ -1,3 +1,15 @@
+/*
+REFERENCES:- 
+
+1. 56 KILLER GOLANG Projects
+https://www.youtube.com/playlist?list=PL5dTjWUk_cPYztKD7WxVFluHvpBNM28N9
+
+2. KUBERNETES RELATED Projects
+https://github.com/deeprajsshetty/Kubernetes
+
+*/
+
+
 1. Mastering Go - Fourth Edition
    https://github.com/mactsouk/mGo4th/blob/main/appA/gColl.go
 
@@ -20,3 +32,4 @@
 /////////////// EMAIL IDS ////////////////
 o.reilly.0000000001@gmail.com - Mail ID 1
 o.reilly.0000000002@gmail.com - Mail ID 2
+o.reilly.0000000003@gmail.com - Mail ID 3
