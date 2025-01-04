@@ -28,8 +28,6 @@ If we increase the price of a product, the following two tables show how that ch
 
 ![alt text](image-58.png)
 
-![alt text](image-59.png)
-
 Figure 5.1 – A CRUD table (Products) and an event store table (Events)
 
 When the price change has been saved to the `Products` table, only the price needs to change, leaving the rest of the row as is. We see in **Figure 5.1** that this is the case; however, we have lost both the previous price and the intent of the change.
