@@ -18,8 +18,19 @@ https://github.com/deeprajsshetty/Kubernetes
 
 3. Event-Driven Architecture in Golang
    https://github.com/PacktPublishing/Event-Driven-Architecture-in-Golang
+
+   // Reference Videos
+   --- Microservice Design Patterns
+   https://www.youtube.com/watch?v=aOen1-pQLZg&list=PLVz2XdJiJQxw1H3JVhclHc__WYDaiS1uL
    
+   --- Master Microservices & Event-Driven Architecture: Complete 6-Hour Guide for Beginners to Advanced
+   https://www.youtube.com/watch?v=FDjmWxETjn8&t=17284s
+
+   --- Building a Massive Golang Microservices Project: GraphQL, gRPC, Docker, Postgres, and Elasticsearch!
+   https://www.youtube.com/watch?v=5UIh1dV7aZ8&list=PL5dTjWUk_cPYztKD7WxVFluHvpBNM28N9
+
 4. Data Structures and Algorithms in Go
+   -- Learning Go, 2nd Edition
    -- Generic Data Structures and Algorithms in Go: An Applied Approach Using Concurrency, Genericity and Heuristics
    -- Learn Data Structures and Algorithms with Golang
 
@@ -33,3 +44,4 @@ https://github.com/deeprajsshetty/Kubernetes
 o.reilly.0000000001@gmail.com - Mail ID 1
 o.reilly.0000000002@gmail.com - Mail ID 2
 o.reilly.0000000003@gmail.com - Mail ID 3
+o.reilly.0000000004@gmail.com - Mail ID 3
