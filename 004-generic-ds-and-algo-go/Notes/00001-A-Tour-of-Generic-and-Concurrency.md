@@ -57,6 +57,113 @@ func main() {
 Output:
 [Michael Jennifer Elaine]
 */
+
 Listing 1-1A slice of students
 
 ```
+
+The function `addStudent` takes a slice of string representing the current collection of students as the first parameter and a string representing a new student to be added to the collection as the second parameter. The `append` function is used to add the new student to the existing slice, and that result is returned.
+
+## Adding a New Student by ID Number
+
+Suppose we wish to specify the slice of students using their ID number, an `int`, instead of their name, a `string`.
+
+    We would need to modify Listing 1-1 as shown in Listing 1-2.
+
+```
+package main
+import(
+    "fmt"
+)
+func addStudent(students []string, student string) []string {
+    return append(students, student)
+}
+func addStudentID(students []int, student int) []int {
+    return append(students, student)
+}
+func main() {
+    students := []string{} // Empty slice
+    result := addStudent(students, "Michael")
+    result = addStudent(result, "Jennifer")
+    result = addStudent(result, "Elaine")
+    fmt.Println(result)
+    students1 := []int{} // Empty slice
+    result1 := addStudentID(students1, 155)
+    result1 = addStudentID(result1, 112)
+    result1 = addStudentID(result1, 120)
+    fmt.Println(result1)
+}
+/* Output
+[Michael Jennifer Elaine]
+[155 112 120]
+*/
+
+Listing 1-2Adding student IDs
+
+```
+
+The logic in function `addStudentID` is essentially the same as in function `addStudent`. Only the base type of the slice is changed from `string` to `int`.
+
+## Adding a New Student by Student Struct
+
+And to take this one step further, suppose we define a `Student` type as:
+
+```
+type Student struct {
+    Name string
+    ID int
+    age float64
+}
+
+```
+
+    and we modify Listing 1-2 as shown in Listing 1-3.
+
+```
+
+package main
+import(
+    "fmt"
+)
+type Student struct {
+    Name string
+    ID int
+    age float64
+}
+func addStudent(students []string, student string) []string {
+    return append(students, student)
+}
+func addStudentID(students []int, student int)  []int {
+    return append(students, student)
+}
+func addStudentStruct(students []Student, student Student) []Student {
+    return append(students, student)
+}
+func main() {
+    students := []string{} // Empty slice
+    result := addStudent(students, "Michael")
+    result = addStudent(result, "Jennifer")
+    result = addStudent(result, "Elaine")
+    fmt.Println(result)
+    students1 := []int{} // Empty slice
+    result1 := addStudentID(students1, 155)
+    result1 = addStudentID(result1, 112)
+    result1 = addStudentID(result1, 120)
+    fmt.Println(result1)
+    students2 := []Student{} // Empty slice
+    result2 := addStudentStruct(students2, Student{"John", 213, 17.5} )
+    result2 = addStudentStruct(result2,  Student{"James", 111, 18.75} )
+    result2 = addStudentStruct(result2,  Student{"Marsha", 110, 16.25} )
+    fmt.Println(result2)
+}
+/* Output
+[Michael Jennifer Elaine]
+[155 112 120]
+[{John 213 17.5} {James 111 18.75} {Marsha 110 16.25}]
+*/
+
+Listing 1-3Adding Student type to the mix
+
+```
+
+Having to add a new function each time we wish to add a new underlying data type to our various student collections is tedious and a major downside to earlier versions of Go.
